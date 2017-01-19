@@ -272,7 +272,7 @@
 				side: THREE.BackSide
 			});
 
-			mesh = new THREE.Mesh(new THREE.IcosahedronGeometry(20, 5), material);
+			mesh = new THREE.Mesh(new THREE.IcosahedronGeometry(100, 5), material);
 			scene.add(mesh);
 
 			renderer = new THREE.WebGLRenderer();
@@ -291,7 +291,7 @@
 		}
 
 		function animate() {
-			material.uniforms['time'].value = 0.0025 * (Date.now() - start);
+			material.uniforms['time'].value = 0.0001 * (Date.now() - start);
 			material.uniforms['weight'].value = 10.0;
 
 
